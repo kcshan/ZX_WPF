@@ -1,0 +1,7 @@
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\bin\Debug\1.1.ConFirstPro.exe.config
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\bin\Debug\1.1.ConFirstPro.exe
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\bin\Debug\1.1.ConFirstPro.pdb
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\obj\Debug\1.1.ConFirstPro.csprojAssemblyReference.cache
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\obj\Debug\1.1.ConFirstPro.csproj.CoreCompileInputs.cache
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\obj\Debug\1.1.ConFirstPro.exe
+D:\workspace\ZX_WPF\1.1.CFP\1.1.ConFirstPro\obj\Debug\1.1.ConFirstPro.pdb
