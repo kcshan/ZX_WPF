@@ -38,8 +38,15 @@ namespace _1._1.ConFirstPro
             long longNum = 34567;
             var money = 2.3; // double
             float f1 = 3.45f;  // float
+            double d2 = 23.56d; // double 不带后缀也可带，D或d
+            decimal del = 2.3M; // decimal 带后缀 M m
 
+            // sizeof(Type)分配空间大小
+            Console.WriteLine(sizeof(decimal));
 
+            DateTime dt = DateTime.Now;
+
+            // Nullable<T> int? float? double? Nullable<int>
 
             //Console.ReadLine();
             Console.ReadKey();
