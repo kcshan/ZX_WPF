@@ -4,8 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1._1.ConFirstPro
+namespace _1._1.ConFirstPro  // 命名空间，默认情况与项目名称一样的
 {
+    /// <summary>
+    /// 入口类 文档注释
+    /// 命名规则：类 属性 方法 结构体 Pascal 首字母大写
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -46,10 +50,90 @@ namespace _1._1.ConFirstPro
 
             DateTime dt = DateTime.Now;
 
+            // 可控类型
             // Nullable<T> int? float? double? Nullable<int>
+            // int c = null; // 引用类型 null
+            int? c = null; // right
+            // bool true false 默认值false 有 无 成功 失败
+            bool bol = false;
+            bol = c > 0 ? true : false;
+            if (bol)
+            {
+                Console.WriteLine("123");
+            }
+
+            // 枚举类型 enum
+            Sex sex = Sex.Female;
+
+            Console.WriteLine(sex); // Female
+            int intFemale = (int)sex; // 枚举转换为整型
+
+            string strSex = sex.ToString();
+            // int 转换成枚举？？
+            Sex sex2 = (Sex)0;
+            // 获取枚举中的常量名称数组
+            string[] sexNamesArr = Enum.GetNames(typeof(Sex));
+            Console.WriteLine(sexNamesArr);
+            Array sexValuesArr = Enum.GetValues(typeof(Sex));
+            Console.WriteLine(sexValuesArr);
 
             //Console.ReadLine();
             Console.ReadKey();
+        }
+
+        /// <summary>
+        /// 枚举类型
+        /// </summary>
+        enum Sex
+        {
+            Male=0,
+            Female=1
+        }
+        /// <summary>
+        /// 结构体 不能继承于其他的结构体或类
+        /// </summary>
+        struct StudentInfo: IPeople
+        {
+            // 不能显示定义无参构造函数
+            //public StudentInfo()
+            //{
+            //}
+            /// <summary>
+            /// 可以有带参数的构造函数
+            /// </summary>
+            /// <param name="_age"></param>
+            /// <param name="stuName"></param>
+            public StudentInfo(int _age, string stuName)
+            {
+                age = _age;
+                StuName = stuName;
+            }
+            public int age;  // 不能赋初值
+            public string StuName { get; set; }
+            public void ShowInfo()
+            {
+                Console.WriteLine($"年龄：{age}, 姓名：{StuName}");
+            }
+
+            // 结构体不能有析构函数
+            //~StudentInfo()
+            //{
+            //}
+        }
+
+        struct People
+        {
+
+        }
+        // class类
+        class PeopleBase
+        {
+
+        }
+        // 接口
+        interface IPeople
+        {
+            void ShowInfo();
         }
     }
 }
