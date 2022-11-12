@@ -73,9 +73,18 @@ namespace _1._1.ConFirstPro  // 命名空间，默认情况与项目名称一样
             Sex sex2 = (Sex)0;
             // 获取枚举中的常量名称数组
             string[] sexNamesArr = Enum.GetNames(typeof(Sex));
+            // 获取枚举中的常量值数组
             Console.WriteLine(sexNamesArr);
+       
             Array sexValuesArr = Enum.GetValues(typeof(Sex));
             Console.WriteLine(sexValuesArr);
+
+            StudentInfo stu1 = new StudentInfo(23, "小星星");
+            stu1.ShowInfo();
+
+            StudentInfo stu2;
+            stu2.age = 23;
+            //stu2.StuName = "小星星";  // 属性不能直接赋值
 
             //Console.ReadLine();
             Console.ReadKey();
@@ -108,9 +117,10 @@ namespace _1._1.ConFirstPro  // 命名空间，默认情况与项目名称一样
                 age = _age;
                 StuName = stuName;
             }
-            public int age;  // 不能赋初值
-            public string StuName { get; set; }
-            public void ShowInfo()
+            public int age;  // 不能赋初值 字段或变量
+            public string StuName { get; set; }  // 属性
+            // 方法 void 没有返回值
+            public void ShowInfo()  // 方法
             {
                 Console.WriteLine($"年龄：{age}, 姓名：{StuName}");
             }
